@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inria_Sans } from 'next/font/google'
 import './globals.css'
 
-const inria = Inria_Sans({ subsets: ['latin'], weight: '400' })
+const inria = Inria_Sans({ subsets: ['latin'], weight: ['400', '700'] })
 
 export const metadata: Metadata = {
   title: 'Desvendando - Jogo de adivinhação de palavras',
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className={inria} lang="pt">
+    <html className={inria.className} lang="pt">
       <body className="bg-[#24222B]">{children}</body>
     </html>
   )
